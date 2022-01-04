@@ -1,0 +1,21 @@
+@import '../index.scss';
+
+.spinner__container {
+  width: 108px;
+  height: 108px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: spin infinite linear forwards 1.5s;
+}
+
+.spinner__icon {
+  color: $primary;
+  font-size: 96px;
+}
+
+@keyframes spin {
+  100% {
+    transform: rotate(360deg);
+  }
+}

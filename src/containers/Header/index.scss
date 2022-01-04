@@ -1,0 +1,17 @@
+@import '../index.scss';
+
+.container__header {
+  height: 96px;
+  font-weight: 700;
+  font-size: 24px;
+  justify-content: space-between;
+  flex-flow: row nowrap;
+}
+
+.container__header > h5 {
+  color: $primary;
+}
+
+.container__header > span {
+  font-size: 48px;
+}

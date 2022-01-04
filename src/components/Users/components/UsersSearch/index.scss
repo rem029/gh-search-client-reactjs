@@ -1,0 +1,51 @@
+@import '../../index.scss';
+
+.user__search__container,
+.user__search__icon__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: row nowrap;
+}
+
+.user__search__container {
+  gap: 8px;
+  height: 48px;
+  width: 100%;
+  max-width: 480px;
+
+  border-radius: 8px;
+  border: 2px solid $border-color-primary;
+  padding: 0 8px;
+
+  background-color: $background;
+  box-shadow: -8px 8px 8px 0px #00000027 inset;
+  -webkit-box-shadow: -4px 4px 4px 0px #00000027 inset;
+  -moz-box-shadow: -4px 4px 8px 4px #00000027 inset;
+
+  transition: border ease-in-out 0.1s;
+}
+
+.user__search__container:focus-within {
+  border: 2px solid $primary;
+}
+
+.user__search__input {
+  background-color: transparent;
+  border: 0;
+  outline: 0;
+  height: 100%;
+  width: 90%;
+  font-size: 16px;
+  padding: 0 8px;
+  letter-spacing: 2px;
+}
+
+.user__search__input::placeholder {
+  color: $input-placeholder;
+}
+
+.user__search__icon {
+  color: $primary;
+  font-size: 24px;
+}

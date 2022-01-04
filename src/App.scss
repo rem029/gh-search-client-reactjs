@@ -1,0 +1,11 @@
+@import './styles/theme.scss';
+
+.app {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-flow: column nowrap;
+  width: 100%;
+  height: max-content;
+  gap: 8px;
+}

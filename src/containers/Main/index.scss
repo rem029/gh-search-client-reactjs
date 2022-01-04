@@ -1,0 +1,9 @@
+@import '../index.scss';
+
+.container__main {
+  min-height: 100vh !important;
+  height: max-content !important;
+  gap: 16px;
+  justify-content: flex-start !important;
+  flex-flow: row nowrap;
+}
