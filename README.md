@@ -5,7 +5,7 @@
 
 > An web application to search github users.
 
-### 🏠 [Homepage](https://gh-search-client-reactjs.vercel.app/)
+### 🏠 [Homepage](https://gh.search.rem029.com/)
 
 ### ✨ [Demo](https://gh-search-client-reactjs.vercel.app/)
 
