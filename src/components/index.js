@@ -2,6 +2,7 @@ import Footer from './Footer';
 import Header from './Header/';
 import Main from './Main/';
 
-import { UserProfile, UsersList, UsersSearch } from './Users/';
+import { UsersList, UsersSearch } from './Users/';
+import UserProfile from './UserProfile/';
 
-export { Footer, Header, Main, UserProfile, UsersList, UsersSearch };
+export { UserProfile, Footer, Header, Main, UsersList, UsersSearch };

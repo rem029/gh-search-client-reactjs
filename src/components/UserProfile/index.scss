@@ -1,0 +1,76 @@
+@import '../../styles/theme.scss';
+
+.user__profile__container,
+.user__profile__container__stats,
+.user__profile__container__listview,
+.user__profile__container__listview_controls,
+.user__profile__container__stats > p,
+.user__profile__container__listview_controls > button {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-flow: column nowrap;
+  gap: 16px;
+}
+
+.user__profile__container {
+  width: 100%;
+  height: 100%;
+  gap: 24px;
+  padding: 16px 8px;
+}
+
+.user__profile__container > a {
+  color: $primary;
+  font-weight: 700;
+  font-size: 24px;
+  text-decoration: underline;
+}
+
+.user__profile__container > img {
+  width: 124px;
+  height: auto;
+  border-radius: 50%;
+  border: 1px solid $border-color-primary;
+}
+
+.user__profile__container__stats {
+  gap: 16px;
+  justify-content: center;
+  flex-flow: row nowrap;
+  width: 100%;
+}
+
+.user__profile__container__listview {
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  flex-flow: column wrap !important;
+}
+
+.user__profile__container__listview_controls {
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  height: 48px;
+  width: 100%;
+  max-width: 480px;
+  gap: 8px;
+}
+
+.user__profile__container__listview_controls > button {
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  font-size: 24px;
+
+  border-radius: 8px;
+  background-color: $background;
+  box-shadow: -4px 4px 16px 0px #5656fd27;
+  -webkit-box-shadow: -4px 4px 16px 0px #5656fd27;
+  -moz-box-shadow: -4px 4px 8px 16px #5656fd27;
+}
+
+.user__profile__container__listview_controls-is-active {
+  background-color: $primary !important;
+  color: #fff;
+}

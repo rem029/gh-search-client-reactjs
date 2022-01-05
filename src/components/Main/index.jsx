@@ -1,7 +1,8 @@
 import { Routes, Route } from 'react-router-dom';
 
 import { Main as MainContainer } from '../../containers/';
-import { UserProfile, UsersList, UsersSearch } from '../Users/';
+import { UsersList, UsersSearch } from '../Users/';
+import UserProfile from '../UserProfile';
 
 const Main = () => {
   return (
