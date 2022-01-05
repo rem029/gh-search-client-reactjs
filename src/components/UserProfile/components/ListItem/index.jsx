@@ -1,9 +1,8 @@
-import { useNavigate } from 'react-router-dom';
 import './index.scss';
 
 const UserListItem = ({ data = {}, isRepo = false }) => {
   return (
-    <div className="user__list__item__container">
+    <div className="list__item__container">
       {!isRepo && (
         <>
           <a href={data.html_url} target="_blank" rel="noreferrer noopener">

@@ -24,6 +24,11 @@ button {
   cursor: pointer;
 }
 
+button:focus {
+  outline: none;
+  box-shadow: none;
+}
+
 #root {
   display: flex;
   justify-content: flex-start;

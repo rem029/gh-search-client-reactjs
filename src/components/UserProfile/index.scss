@@ -68,9 +68,15 @@
   box-shadow: -4px 4px 16px 0px #5656fd27;
   -webkit-box-shadow: -4px 4px 16px 0px #5656fd27;
   -moz-box-shadow: -4px 4px 8px 16px #5656fd27;
+
+  transition: all ease-in-out 0.3s;
 }
 
 .user__profile__container__listview_controls-is-active {
   background-color: $primary !important;
   color: #fff;
+}
+
+.user__profile__container__listview_controls > button:active {
+  transform: translateY(8px);
 }

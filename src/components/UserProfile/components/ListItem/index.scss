@@ -1,6 +1,6 @@
 @import '../../index.scss';
 
-.user__list__item__container {
+.list__item__container {
   width: 100%;
   min-height: 64px;
 
@@ -19,14 +19,14 @@
   cursor: default;
 }
 
-.user__list__item__container > p,
+.list__item__container > p,
 a {
   font-weight: 700;
   color: $primary;
   text-align: left;
 }
 
-.user__list__item__container > img {
+.list__item__container > img {
   width: 48px;
   height: auto;
   border-radius: 50%;
