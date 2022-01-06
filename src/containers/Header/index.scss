@@ -12,6 +12,7 @@
   color: $primary;
 }
 
-.container__header > span {
+.container__header > span > a {
   font-size: 48px;
+  color: #000;
 }
