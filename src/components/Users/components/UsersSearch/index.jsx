@@ -3,6 +3,7 @@ import { AiOutlineSearch } from 'react-icons/ai';
 
 import useSearch from '../../hooks/useSearch.js';
 import './index.scss';
+import { useEffect } from 'react';
 
 const UsersSearch = () => {
   const [searchParams, setSearchParams] = useSearchParams();
@@ -13,6 +14,7 @@ const UsersSearch = () => {
     searchValueHandleChange(e.target.value);
     setSearchParams({ search: e.target.value });
   };
+
   return (
     <div className="user__search__container">
       <input

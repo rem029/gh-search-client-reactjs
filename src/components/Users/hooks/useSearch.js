@@ -14,7 +14,8 @@ const useSearch = (defaultValue = '') => {
   const searchValueHandleChange = (text = '') => dispatch({ type: 'QUERY_UPDATE', query: text });
 
   useEffect(() => {
-    dispatch({ type: 'QUERY_UPDATE', query: defaultValue });
+    if (defaultValue.length > 0) dispatch({ type: 'QUERY_UPDATE', query: defaultValue });
+
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
