@@ -2,7 +2,6 @@ import { AiOutlineFileSearch } from 'react-icons/ai';
 import { BiSkipNext, BiSkipPrevious } from 'react-icons/bi';
 import { useSelector } from 'react-redux';
 
-import useSearch from '../../hooks/useSearch';
 import config from '../../../../config';
 
 import UserListItem from '../UserListItem';
@@ -10,14 +9,13 @@ import { Spinner } from '../../../UI';
 
 import './index.scss';
 
-const UsersList = () => {
+const UsersList = ({ currentPage = 1, pageNext = () => {}, pagePrevious = () => {} }) => {
   const usersLoading = useSelector((state) => state.users.loading);
   const usersData = useSelector((state) => state.users.data?.items || []);
   const userTotalItems = useSelector((state) => state.users.data?.total_count || 0);
   const usersError = useSelector((state) => state.users.errors);
 
   const query = useSelector((state) => state.query || '');
-  const { currentPage, pageNext, pagePrevious } = useSearch(query);
 
   const onClickNext = (e) => {
     e.preventDefault();

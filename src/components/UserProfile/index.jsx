@@ -84,19 +84,19 @@ const UserProfile = () => {
           <div className="user__profile__container__listview">
             <div className="user__profile__container__listview_controls">
               <button
-                className={activeView === 'Followers' && 'user__profile__container__listview_controls-is-active'}
+                className={activeView === 'Followers' ? 'user__profile__container__listview_controls-is-active' : ''}
                 onClick={setViewTo['followers']}
               >
                 <FaUserFriends />
               </button>
               <button
-                className={activeView === 'Following' && 'user__profile__container__listview_controls-is-active'}
+                className={activeView === 'Following' ? 'user__profile__container__listview_controls-is-active' : ''}
                 onClick={setViewTo['following']}
               >
                 <FiUser />
               </button>
               <button
-                className={activeView === 'Repos' && 'user__profile__container__listview_controls-is-active'}
+                className={activeView === 'Repos' ? 'user__profile__container__listview_controls-is-active' : ''}
                 onClick={setViewTo['repos']}
               >
                 <BsFillJournalBookmarkFill />

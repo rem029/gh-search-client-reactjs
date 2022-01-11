@@ -1,10 +1,12 @@
 import { Routes, Route } from 'react-router-dom';
 
 import { Main as MainContainer } from '../../containers/';
-import { UsersList, UsersSearch } from '../Users/';
+import { UsersList, UsersSearch, useSearch } from '../Users/';
 import UserProfile from '../UserProfile';
 
 const Main = () => {
+  const { currentPage, pageNext, pagePrevious, searchValue, searchValueHandleChange } = useSearch('');
+
   return (
     <MainContainer>
       <Routes>
@@ -12,8 +14,8 @@ const Main = () => {
           path="/"
           element={
             <>
-              <UsersSearch />
-              <UsersList />
+              <UsersSearch searchValue={searchValue} searchValueHandleChange={searchValueHandleChange} />
+              <UsersList currentPage={currentPage} pageNext={pageNext} pagePrevious={pagePrevious} />
             </>
           }
         />

@@ -6,6 +6,7 @@ import config from '../../../config';
 
 const useSearch = (defaultValue = '') => {
   const searchValue = useSelector((state) => state.query);
+
   const [currentPage, setCurrentPage] = useState(1);
   const dispatch = useDispatch();
 
@@ -14,7 +15,7 @@ const useSearch = (defaultValue = '') => {
   const searchValueHandleChange = (text = '') => dispatch({ type: 'QUERY_UPDATE', query: text });
 
   useEffect(() => {
-    dispatch({ type: 'QUERY_UPDATE', query: defaultValue });
+    if (defaultValue.length > 0) dispatch({ type: 'QUERY_UPDATE', query: defaultValue });
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
@@ -22,7 +23,6 @@ const useSearch = (defaultValue = '') => {
     const searchValueSubmit = () => {
       const maxPage = config.itemsPerPage;
       const urlEndPoint = `/search/users?per_page=${maxPage}&q=${searchValue}&page=${currentPage}`;
-
       if (searchValue.length > 0) dispatch(get({ urlEndPoint: urlEndPoint }));
     };
 
